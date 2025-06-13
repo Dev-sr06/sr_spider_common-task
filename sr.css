@@ -1,0 +1,165 @@
+  body {
+            font-family:  sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #4fd417; 
+            color: #fff;
+            overflow: hidden; 
+        }
+
+        .game-container {
+            background-color: #37a02d; 
+            border: 10px solid #5A2D0C;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            position: relative;
+            width: 90%;
+            max-width: 600px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: #FFD700; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        canvas {
+            background-color: #D2B48C; 
+            border: 5px solid #654321;
+            border-radius: 10px;
+            display: block;
+            margin: 20px auto;
+            width: 100%; 
+            max-width: 500px;
+            height: 250px; 
+        }
+
+        .score-board {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .score-display, .current-player-display {
+            background-color: #E6B800; 
+            color: #8B4513; 
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1em;
+            min-width: 120px; 
+        }
+
+        .current-player-display {
+            background-color: #FF6347; 
+            color: white;
+        }
+
+        .game-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap; 
+            justify-content: center;
+        }
+
+        button {
+            background-color: #FF4500;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        button:hover {
+            background-color: #FF6347; 
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+            box-shadow: none;
+            transform: none;
+        }
+
+        .message-box {
+            background-color: #FFD700;
+            color: #8B4513;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-align: center;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            transition: opacity 0.3s ease;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .hammer-img {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 100px; 
+            height: auto;
+            transform: rotate(20deg); 
+            filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            .score-board {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+            .score-display, .current-player-display {
+                width: 80%;
+                margin: 0 auto;
+            }
+            .game-buttons {
+                flex-direction: column;
+                width: 80%;
+            }
+            button {
+                width: 100%;
+            }
+            .hammer-img {
+                width: 70px;
+            }
+        }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hammer Strength Game</title>
+   <link rel="stylesheet" href="sr.css">
+</head>
+<body>
+    <div class="game-container">
+
+        <h1>Hammer_Strength_Game</h1>
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div class="score-board">
+            <div id="player1Score" class="score-display">Score: 0</div>
+
+        </div>
+
+        <div id="currentPlayerDisplay" class="current-player-display">Your Turn!</div>
+
+        <div class="game-buttons">
+            <button id="startButton">Start Game</button>
+            <button id="stopButton" disabled>Stop Swing (Space)</button>
+            <button id="resetButton" class="hidden">Play Again</button>
+        </div>
+        
+        <div id="messageBox" class="message-box hidden">
+            Click 'Start Game' to begin!
+            </div>
+
+            <script src="sr.js"></script>
+
+</body>
+</html>
